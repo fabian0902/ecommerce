@@ -8,17 +8,19 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
-var corsOptions = {
-  origin: "http://localhost:5001",
-  optionsSuccessStatus: 200,
-  cretentials: true,
-};
-
 //middlewares
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
+
+// Crear una configuracion de cors
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
+
 app.use(
   fileUpload({
     useTempFiles: true,
@@ -45,7 +47,7 @@ mongoose
 
 
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("server is running", PORT);
 });

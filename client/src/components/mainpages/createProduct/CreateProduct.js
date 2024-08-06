@@ -145,7 +145,7 @@ function CreateProduct() {
 
       <form onSubmit={handleSubmit} className="create_form">
         <div className="row">
-          <label htmlFor="product_id">Product Id</label>
+          <label htmlFor="product_id">ID DEL PRODUCTO</label>
         </div>
         <input
           type="text"
@@ -158,7 +158,7 @@ function CreateProduct() {
 
         <div className="row">
           <div>
-            <label htmlFor="title">title</label>
+            <label htmlFor="title">TITULO</label>
           </div>
         </div>
         <input
@@ -172,7 +172,7 @@ function CreateProduct() {
 
         <div className="row">
           <div>
-            <label htmlFor="price">Price</label>
+            <label htmlFor="price">PRECIO</label>
           </div>
         </div>
         <input
@@ -186,7 +186,7 @@ function CreateProduct() {
 
         <div className="row">
           <div>
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">DESCRIPCION DEL PRODUCTO</label>
           </div>
         </div>
         <textarea
@@ -200,7 +200,7 @@ function CreateProduct() {
 
         <div className="row">
           <div>
-            <label htmlFor="content">content</label>
+            <label htmlFor="content">CONTENIDO</label>
           </div>
         </div>
         <textarea
@@ -212,7 +212,7 @@ function CreateProduct() {
           onChange={handleChangeInput}
         />
 
-        <button type="submit">{onEdit ? "Update" : "Create"} </button>
+        <button type="submit">{onEdit ? "Update" : "CREAR PRODUCTO"} </button>
       </form>
     </div>
   );

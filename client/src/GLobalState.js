@@ -9,15 +9,15 @@ export const DataProvider = ({ children }) => {
   const [token, setToken] = useState(false);
 
   useEffect(() => {
-    const firstLogin = localStorage.getItem("firstLogin"); 
+    const firstLogin = localStorage.getItem("firstLogin"); //xD
     if (firstLogin) {
       const refreshToken = async () => {
         const res = await axios.get("/user/refresh_token");
         setToken(res.data.accesstoken);
         setTimeout(() => {
           refreshToken();
-        }, 10 * 60 * 1000);// cada 10 minutos refresca el token
-      };
+        }, 10 * 60 * 1000);
+      }
       refreshToken();
     }
   }, []);
@@ -30,8 +30,8 @@ export const DataProvider = ({ children }) => {
     }
 
     return(
-       <GlobalState.Provider value={state}>
-         {children}
-       </GlobalState.Provider>
+        <GlobalState.Provider value={state}>
+            {children}
+        </GlobalState.Provider>
     )
 };

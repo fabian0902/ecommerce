@@ -1,6 +1,6 @@
 import {useContext,useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom';
-import {GlobalState} from '../../../GLobalState';
+import {GlobalState} from '../../../GLobalState'
 
 
 

@@ -23,12 +23,12 @@ function Register() {
   return (
     <div className="login-page">
       <form onSubmit={registerSubmit}>
-        <h2>Register</h2>
+        <h2>REGISTRO DE USUARIO</h2>
         <input
           type="text"
           name="name"
           required
-          placeholder="Name"
+          placeholder="Nombre"
           value={user.name}
           onChange={onChangeInput}
         />
@@ -50,7 +50,7 @@ function Register() {
         />
 
         <div className="row"></div>
-        <button type="submit"> Register</button>
+        <button type="submit"> Registrar</button>
         <Link  to={"/login"} > Login</Link>
 
       </form>

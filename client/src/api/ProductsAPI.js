@@ -8,9 +8,10 @@ function ProductsAPI() {
   useEffect(() => {
     const getProducts = async () => {
       const res = await axios.get("/api/products");
-      setProducts(res.data.products);
-    };
-    getProducts();
+      //setProducts(res.data.products);
+      console.log(res.data);
+    }
+  getProducts();
   }, [callback]);
 
   return {
