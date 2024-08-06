@@ -1,0 +1,27 @@
+{
+    "devDependencies": {
+      "nodemon": "^2.0.20"
+    },
+    "scripts": {
+      "start": "node index.js",
+      "server": "nodemon index.js",
+      "client": "cd client && npm run install",
+      "client-install": "cd client && npm install",
+      "server-install": "npm install",
+      "install-all": "concurrently \"npm run client-install\" \"npm run client-install\" ",
+      "dev": "npm run server"
+    },
+    "dependencies": {
+      "bcrypt": "^5.1.0",
+      "cloudinary": "^1.34.0",
+      "cookie-parser": "^1.4.6",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "express-fileupload": "^1.4.0",
+      "fs": "^0.0.1-security",
+      "jsonwebtoken": "^9.0.0",
+      "mongoose": "^6.9.1",
+      "morgan": "^1.10.0"
+    }
+  }
